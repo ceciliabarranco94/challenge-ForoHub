@@ -1,6 +1,6 @@
 package com.aluracursos.challenge_ForoHub.controller;
 
-import com.aluracursos.challenge_ForoHub.topico.*;
+import com.aluracursos.challenge_ForoHub.domain.topico.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/topicos")
@@ -63,9 +61,5 @@ public class TopicoController {
 
         return ResponseEntity.ok(new DatosDetalleTopico(topico));
     }
-    
-
-
-
 
 }

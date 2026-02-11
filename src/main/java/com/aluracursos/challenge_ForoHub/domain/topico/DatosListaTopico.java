@@ -1,8 +1,8 @@
-package com.aluracursos.challenge_ForoHub.topico;
+package com.aluracursos.challenge_ForoHub.domain.topico;
 
 import java.time.LocalDateTime;
 
-public record DatosDetalleTopico(
+public record DatosListaTopico(
         Long id,
         String titulo,
         String mensaje,
@@ -11,7 +11,8 @@ public record DatosDetalleTopico(
         String autor,
         Curso curso
 ) {
-    public DatosDetalleTopico(Topico topico){
+
+    public DatosListaTopico(Topico topico) {
         this(
                 topico.getId(),
                 topico.getTitulo(),
@@ -19,7 +20,6 @@ public record DatosDetalleTopico(
                 topico.getFechaCreacion(),
                 topico.getStatus(),
                 topico.getAutor(),
-                topico.getCurso()
-        );
+                topico.getCurso());
     }
 }
